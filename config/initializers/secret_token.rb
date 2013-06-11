@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-ATuttaBirra::Application.config.secret_token = '495424017712bc6ca30397d49cde22fa2be5ea1169a577c3b15adf398d7f7a663cd78fab74d5905fa4056299493498e5ecc0f414e8473226fb02cfb281c4628a'
+SWorD::Application.config.secret_token = '674563fa72f53f7529389d9a6e1142d1a567139072b53732acdfa7cfa494c0322b8b39de0b813d66458773091267a49f15bef6a85b7f981cdbbc0f07527535cb'
