@@ -19,6 +19,16 @@ html {
 }
 
 body {
+  background-image: url('Sfondo nero.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 60px;
+}
+
+#home {
+  background-image: url('Beer_Mug.JPG');
+  background-attachment: fixed;
+  background-size: 100% 105%;
   padding-top: 60px;
 }
 
@@ -84,14 +94,15 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 200px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
   a {
-    color: $gray;
+    color: $white;
     &:hover {
-      color: $grayDarker;
+      color: #ffc20f;
+      text-decoration: none;
     }
   }
   small {
@@ -237,12 +248,4 @@ input {
   }
 }
 
-/* miscellaneous */
 
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
