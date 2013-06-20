@@ -8,7 +8,16 @@
     <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
 
-        <%= f.label :name %>
+        <%= f.label :nome %>
+        <%= f.text_field :name %>
+
+        <%= f.label :cognome %>
+        <%= f.text_field :name %>
+
+        <%= f.label :data_di_nascita %>
+        <%= f.text_field :name %>
+
+        <%= f.label :città %>
         <%= f.text_field :name %>
 
         <%= f.label :email %>
@@ -17,10 +26,15 @@
         <%= f.label :password %>
         <%= f.password_field :password %>
 
-        <%= f.label :password_confirmation, 'Confirmation' %>
+        <%= f.label :password_confirmation, 'Conf. Password' %>
         <%= f.password_field :password_confirmation %>
 
-        <%= f.submit 'Create my account', class: 'btn btn-large btn-primary' %>
+        <%= f.label :chi_sei_? %>
+        <%= f.radio_button :name, '1', :checked => true %> Appassionato di birra
+        <%= f.radio_button :name, '2' %> Homebrewer
+        <%= f.radio_button :name, '3' %> Mastro Birraio
+
+        <%= f.submit 'Registra', class: 'btn btn-large btn-primary' %>
     <% end %>
   </div>
 </div>

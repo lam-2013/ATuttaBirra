@@ -1,5 +1,5 @@
 <% #Provide the page title in a symbol to application.html.erb to avoid duplication %>
-<% provide :title, 'Sign In' %>
+<% provide :title, 'Login' %>
 
 <h1>Sign In</h1>
 
@@ -13,7 +13,7 @@
         <%= f.label :password %>
         <%= f.password_field :password %>
 
-        <%= f.submit 'Sign in', class: 'btn btn-large btn-primary' %>
+        <%= f.submit 'Entra', class: 'btn btn-large btn-primary' %>
     <% end %>
 
     <p>New user? <%= link_to 'Sign up now!', signup_path %></p>

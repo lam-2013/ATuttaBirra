@@ -13,7 +13,8 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation
+  attr_accessible :email, :name, :password, :password_confirmation, :cognome
+
 
   # basically, the method realizes the authentication system
   has_secure_password
@@ -54,6 +55,9 @@ class User < ActiveRecord::Base
 
   # password_confirmation must be always present
   validates :password_confirmation, presence: true
+
+  # valida cognome
+  validates :cognome, presence: true, length: {maximum: 50} ;
 
   # is the current user following the given user?
   def following?(other_user)

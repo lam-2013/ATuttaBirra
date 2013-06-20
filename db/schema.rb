@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20130606064234) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin"
+    t.string   "cognome"
   end
 
 end
