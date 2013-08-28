@@ -13,17 +13,18 @@
     </aside>
     <div class="span9">
       <%= render 'shared/post_form' %>
-      <h3>Diario Utente prova</h3>
+      <h3>Diario Utente</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>
 <% else %>
   <body id="home">
-  <div class="center hero-unit">
-    <h1>Benvenuti su A TuttaBirra!</h1>
+  <div class="center hero-unit" >
 
+    <h1>Benvenuti su <br> A TuttaBirra!</h1>
+    <br>
     <h2>
-      Registrati o fai il LogIn per accedere ad A TuttaBirra.
+      Registrati o fai il LogIn  <br> per accedere ad A TuttaBirra.
     </h2>
 
     <%= link_to 'Registrati!', signup_path, class: 'btn btn-large btn-primary' %>

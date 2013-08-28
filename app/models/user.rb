@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
 
   # name must be always present and with a maximum length of 50 chars
   validates :name, presence: true, length: { maximum: 50 };
-
+  validates :cognome, presence: true, length: { maximum: 50 };
   # email allowed format representation (expressed as a regex)
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+.[a-z]+\z/i
 
@@ -56,8 +56,6 @@ class User < ActiveRecord::Base
   # password_confirmation must be always present
   validates :password_confirmation, presence: true
 
-  # valida cognome
-  validates :cognome, presence: true, length: {maximum: 50} ;
 
   # is the current user following the given user?
   def following?(other_user)

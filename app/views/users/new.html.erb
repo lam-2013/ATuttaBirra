@@ -1,15 +1,16 @@
 <% #Provide the page title in a symbol to application.html.erb to avoid duplication %>
-<% provide :title, 'Sign Up' %>
+<% provide :title, 'Registrati' %>
 
-<h1>Sign Up</h1>
+<h1 id="registrati">Registrati</h1>
 
 <div class="row">
-  <div class="span6 offset3">
+ <div class="span5 offset3">
     <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
-
-        <%= f.label :nome %>
-        <%= f.text_field :name %>
+        <%# <%= f.label :nome %>
+        <p><label for="name">Nome</label>
+        <%= f.text_field :name, :size => 10 %>
+        </p>
 
         <%= f.label :cognome %>
         <%= f.text_field :name %>
@@ -31,10 +32,14 @@
 
         <%= f.label :chi_sei_? %>
         <%= f.radio_button :name, '1', :checked => true %> Appassionato di birra
+        <br>
         <%= f.radio_button :name, '2' %> Homebrewer
+        <br>
         <%= f.radio_button :name, '3' %> Mastro Birraio
+        <br>
+        <br>
 
         <%= f.submit 'Registra', class: 'btn btn-large btn-primary' %>
     <% end %>
-  </div>
+ </div>
 </div>
