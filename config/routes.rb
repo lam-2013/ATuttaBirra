@@ -4,6 +4,7 @@ SWorD::Application.routes.draw do
   root :to => 'pages#home'
 
   # named routes for static pages, signup, login and logout
+  match '/cerca', to: 'pages#cerca'
   match '/about', to: 'pages#about'
   match '/contact', to: 'pages#contact'
   match '/faq', to: 'pages#faq'
