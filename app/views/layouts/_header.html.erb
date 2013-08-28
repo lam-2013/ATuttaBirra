@@ -7,7 +7,7 @@
         <%=link_to image_tag("logo.png", :size => "60x60"), root_path %>
         <ul class="nav pull-right">
           <% #link_to is the Rails helper to create links (it generates <a...> tags) %>
-          <li><%= link_to "Profilo", current_user %></li>
+          <li><%= link_to "Account", current_user %></li>
           <li><%=link_to "Home",    root_path %></li>
           <li><%=link_to "Cerca",     faq_path %></li>
           <% if signed_in? %>

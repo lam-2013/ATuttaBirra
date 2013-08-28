@@ -12,4 +12,8 @@ class PagesController < ApplicationController
 
   def faq
   end
+
+  def cerca
+  end
+
 end
