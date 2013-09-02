@@ -10,10 +10,10 @@ $grayMediumLight: #eaeaea;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+
 }
 
 /* general */
-
 html {
   overflow-y: scroll;
 }
@@ -23,6 +23,8 @@ body {
   background-attachment: fixed;
   background-size: cover;
   padding-top: 60px;
+  font-family: Josschrift Serif;
+
 }
 
 #home {
@@ -163,7 +165,6 @@ aside {
 }
 
 .stats {
-  overflow: auto;
   a {
     float: left;
     padding: 0 10px;
