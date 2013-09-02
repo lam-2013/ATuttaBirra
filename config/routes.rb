@@ -13,11 +13,13 @@ SWorD::Application.routes.draw do
   # signout should be performed by using the HTTP DELETE request
   match '/signout', to: 'sessions#destroy', via: :delete
 
+
   # routes for the Users controller (default plus following, followers and search)
+
   resources :users do
     # member: apply the reported actions to each single member (to /users/{:id}, in this case)
     member do
-      get :following, :followers # ex.: get /users/1/followers
+      get :following, :followers, :in_cantina, :gusta, :mercatino # ex.: get /users/1/followers
     end
     # collection: apply the reported action to the entire collection (to /users/, in this case)
     collection do
@@ -33,6 +35,8 @@ SWorD::Application.routes.draw do
 
   # default routes for the Relationship controller (only create and destroy) - needed to build follow/unfollow relations
   resources :relationships, only: [:create, :destroy]
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

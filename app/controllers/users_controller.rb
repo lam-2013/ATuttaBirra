@@ -92,6 +92,20 @@ class UsersController < ApplicationController
     @users = User.search(params[:search]).paginate(page: params[:page])
   end
 
+  def in_cantina
+    @title = 'In Cantina'
+    @user = User.find(params[:id])
+    render 'in_cantina'
+  end
+
+  def gusta
+    @title = 'Gusta'
+  end
+
+  def mercatino
+    @title = 'Mercatino'
+  end
+
   private
 
     # Take the current user information (id) and redirect her to the home page if she is not the 'right' user
@@ -105,5 +119,6 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to root_path unless current_user.admin?
     end
+
 
 end

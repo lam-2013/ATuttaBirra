@@ -8,6 +8,14 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+
+      <p>
+     <%= link_to "In Cantina", :action => "in_cantina" %> <br>
+     <%= link_to "Gusta", :action => "gusta" %>       <br>
+     <%= link_to "Mercatino", :action => "mercatino" %>
+
+      </p>
+
     </section>
     <section>
       <%= render 'shared/stats' %>

@@ -9,26 +9,26 @@
         <%= render 'shared/error_messages', object: f.object %>
         <%# <%= f.label :nome %>
         <p><label for="name">Nome</label>
-        <%= f.text_field :name, :size => 10 %>
+        <%= f.text_field :name, placeholder: 'Inserisci nome' %>
         </p>
 
         <%= f.label :cognome %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: 'Inserisci cognome' %>
 
         <%= f.label :data_di_nascita %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: 'gg/mm/aaaa' %>
 
         <%= f.label :città %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, placeholder: 'Inserisci città in cui vivi' %>
 
         <%= f.label :email %>
-        <%= f.text_field :email %>
+        <%= f.text_field :email, placeholder: 'Inserisci indirizzo email' %>
 
         <%= f.label :password %>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, placeholder: 'Inserisci password' %>
 
         <%= f.label :password_confirmation, 'Conf. Password' %>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation, placeholder: 'Conferma password' %>
 
         <%= f.label :chi_sei_? %>
         <%= f.radio_button :name, '1', :checked => true %> Appassionato di birra

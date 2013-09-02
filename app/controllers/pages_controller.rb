@@ -16,4 +16,5 @@ class PagesController < ApplicationController
   def cerca
   end
 
+
 end
