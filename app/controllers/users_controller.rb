@@ -92,6 +92,30 @@ class UsersController < ApplicationController
     @users = User.search(params[:search]).paginate(page: params[:page])
   end
 
+  def amici
+    @title = 'Amici'
+    @user = User.find(params[:id])
+    render 'amici'
+  end
+
+  def gallery
+    @title = 'Gallery'
+    @user = User.find(params[:id])
+    render 'gallery'
+  end
+
+  def messaggi
+    @title = 'Messaggi'
+    @user = User.find(params[:id])
+    render 'messaggi'
+  end
+
+  def il_mio_birrificio
+    @title = 'Il mio Birrificio'
+    @user = User.find(params[:id])
+    render 'il_mio_birrificio'
+  end
+
   def in_cantina
     @title = 'In Cantina'
     @user = User.find(params[:id])
@@ -104,6 +128,12 @@ class UsersController < ApplicationController
 
   def mercatino
     @title = 'Mercatino'
+  end
+
+  def gruppi
+    @title = 'Gruppi'
+    @user = User.find(params[:id])
+    render 'gruppi'
   end
 
   private

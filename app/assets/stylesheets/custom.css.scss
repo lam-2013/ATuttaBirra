@@ -32,6 +32,9 @@ body {
   padding-top: 60px;
 }
 
+div#classhome{
+background: transparent;
+}
 section {
   overflow: auto;
 }
@@ -98,16 +101,7 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
 }
 
 /* footer */
@@ -267,5 +261,3 @@ input {
     margin-bottom: 5px;
   }
 }
-
-
