@@ -14,7 +14,7 @@ $grayMediumLight: #eaeaea;
 }
 
 /* general */
-html {
+htmroutel {
   overflow-y: scroll;
 }
 
@@ -32,11 +32,53 @@ body {
   background-attachment: fixed;
   background-size: 100% 105%;
   padding-top: 60px;
+  text-shadow: 3px 4px 3px #000;
 }
 
 div#classhome{
-background: transparent;
+  background: transparent;
+
 }
+
+div#banner{
+  width: 1000px;
+  height: 500px;
+  float: left;
+  background-image:  url('Banner.png');
+  background-repeat: no-repeat;
+  background-size: 950px, 230px;
+  position: relative;
+}
+
+div#nomeutente{
+  float: left;
+  top: 220px;
+  position: absolute;
+  left: 150px;
+
+}
+
+div#infoutente{
+  //float: left;
+  padding-left: 10px;
+  top: 20px;
+  position: relative;
+  //right: 10px;
+   text-align: center;
+}
+
+div#barramenu{
+  width: 1500px;
+  height: 500px;
+ // float: left;
+  background-image:  url('Menu.png');
+  background-repeat: no-repeat;
+  background-size: 2000px, 400px;
+  background-origin: content-box;
+  position: relative;
+
+}
+
 section {
   overflow: auto;
 }
@@ -109,7 +151,7 @@ p {
 /* footer */
 
 footer {
-  margin-top: 200px;
+  margin-top: 130px;
 
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;

@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
     # get and paginate the posts associated to the specified user
     @posts = @user.posts.paginate(page: params[:page])
+    render 'show'
   end
 
   def new
@@ -136,6 +137,12 @@ class UsersController < ApplicationController
     render 'gruppi'
   end
 
+  def account_menu
+    @title = 'Account menu'
+    @user = User.find(params[:id])
+    render 'account_menu'
+  end
+
   private
 
     # Take the current user information (id) and redirect her to the home page if she is not the 'right' user
@@ -149,6 +156,8 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to root_path unless current_user.admin?
     end
+
+
 
 
 end
