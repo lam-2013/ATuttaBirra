@@ -7,13 +7,21 @@
         <%=link_to image_tag("logo.png", :size => "60x60"), root_path %>
         <ul class="nav pull-right">
           <% #link_to is the Rails helper to create links (it generates <a...> tags) %>
+
+
+          <% if signed_in? %>
+          <li id="account"><%= link_to "Account", account_menu_path %></li>
+
+          <% end %>
+
           <li><%=link_to "Home",    root_path %></li>
 
           <% if signed_in? %>
-          <li id="account"><%= link_to "Account", :action => "account_menu" %></li>
+            <%# <li><%= link_to "Users", users_path %>
+              <%#   <li><%= render 'users/search_form' %>
+              <li><%= link_to "Cerca", cerca_path %></li>
+              </li>
 
-
-            <%# <li><%= link_to "Users", users_path %>      </li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Impostazioni <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -21,8 +29,7 @@
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
                 <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
-              </ul><li><%= render 'users/search_form' %></li>
-            </li>
+              </ul>
           <% else %>
             <li><%=link_to "Sign in", signin_path %></li>
           <% end %>

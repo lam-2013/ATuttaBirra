@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def show
     # get the user with id :id
     @user = User.find(params[:id])
+    @tags = User.find(params[:id])
 
     # get and paginate the posts associated to the specified user
     @posts = @user.posts.paginate(page: params[:page])
@@ -135,12 +136,6 @@ class UsersController < ApplicationController
     @title = 'Gruppi'
     @user = User.find(params[:id])
     render 'gruppi'
-  end
-
-  def account_menu
-    @title = 'Account menu'
-    @user = User.find(params[:id])
-    render 'account_menu'
   end
 
   private

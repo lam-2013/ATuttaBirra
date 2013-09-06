@@ -43,4 +43,11 @@ ActiveRecord::Schema.define(:version => 20130606064234) do
     t.boolean  "admin"
   end
 
+  create_table "tags", :force => true do |t|
+    t.string   "nometag"
+    t.integer  "idutente"
+    t.datetime "usato_il"
+
+  end
+
 end

@@ -7,11 +7,11 @@ SWorD::Application.routes.draw do
   match '/cerca', to: 'pages#cerca'
   match '/about', to: 'pages#about'
   match '/contact', to: 'pages#contact'
-  match '/faq', to: 'pages#faq'
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   # signout should be performed by using the HTTP DELETE request
   match '/signout', to: 'sessions#destroy', via: :delete
+  match '/account_menu', to: 'pages#account_menu'
 
 
   # routes for the Users controller (default plus following, followers and search)
@@ -20,7 +20,7 @@ SWorD::Application.routes.draw do
     # member: apply the reported actions to each single member (to /users/{:id}, in this case)
     member do
       get :following, :followers, :amici, :gallery, :messaggi, :il_mio_birrificio,
-          :in_cantina, :gusta, :mercatino, :gruppi, :account_menu # ex.: get /users/1/followers
+          :in_cantina, :gusta, :mercatino, :gruppi, :show # ex.: get /users/1/followers
     end
     # collection: apply the reported action to the entire collection (to /users/, in this case)
     collection do

@@ -10,5 +10,11 @@ class PagesController < ApplicationController
   def contact
   end
 
+  def cerca
+  end
+
+  def account_menu
+  end
+
 
 end

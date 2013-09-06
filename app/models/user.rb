@@ -14,7 +14,7 @@
 
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation, :cognome
-
+  attr_accessible :nometag, :idutente
 
   # basically, the method realizes the authentication system
   has_secure_password
@@ -85,6 +85,51 @@ class User < ActiveRecord::Base
       scoped # return an empty result set
     end
   end
+
+
+
+  def self.search(tag)
+    @tags ||= find_tags
+  end
+
+  private
+
+  def find_tags
+    Tag.find(:all, :conditions => conditions)
+    if tag
+      where('tags.nometag LIKE ?', "%#{tag}%")
+
+    else
+      scoped
+    end
+  end
+
+  def keyword_conditions
+    ["tags.nometag LIKE ?", "%#{keywords}%"] unless keywords.blank?
+  end
+
+
+
+
+
+  def conditions
+    [conditions_clauses.join(' AND '), *conditions_options]
+  end
+
+  def conditions_clauses
+    conditions_parts.map { |condition| condition.first }
+  end
+
+  def conditions_options
+    conditions_parts.map { |condition| condition[1..-1] }.flatten
+  end
+
+  def conditions_parts
+    private_methods(false).grep(/_conditions$/).map { |m| send(m) }.compact
+  end
+
+
+
 
   # private methods
   private
