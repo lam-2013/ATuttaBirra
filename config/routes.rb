@@ -16,15 +16,17 @@ SWorD::Application.routes.draw do
 
   # routes for the Users controller (default plus following, followers and search)
 
+
   resources :users do
     # member: apply the reported actions to each single member (to /users/{:id}, in this case)
     member do
       get :following, :followers, :amici, :gallery, :messaggi, :il_mio_birrificio,
-          :in_cantina, :gusta, :mercatino, :gruppi, :show # ex.: get /users/1/followers
+          :in_cantina, :gusta, :mercatino, :gruppi # ex.: get /users/1/followers
     end
     # collection: apply the reported action to the entire collection (to /users/, in this case)
     collection do
-      get :search
+      get :search, :amici, :gallery, :messaggi, :il_mio_birrificio,
+          :in_cantina, :gusta, :mercatino, :gruppi
     end
   end
 

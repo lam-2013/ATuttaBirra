@@ -9,11 +9,9 @@ class UsersController < ApplicationController
   def show
     # get the user with id :id
     @user = User.find(params[:id])
-    @tags = User.find(params[:id])
 
     # get and paginate the posts associated to the specified user
     @posts = @user.posts.paginate(page: params[:page])
-    render 'show'
   end
 
   def new
@@ -96,45 +94,49 @@ class UsersController < ApplicationController
 
   def amici
     @title = 'Amici'
-    @user = User.find(params[:id])
+    @user = current_user
     render 'amici'
   end
 
   def gallery
     @title = 'Gallery'
-    @user = User.find(params[:id])
+    @user = current_user
     render 'gallery'
   end
 
   def messaggi
     @title = 'Messaggi'
-    @user = User.find(params[:id])
+    @user = current_user
     render 'messaggi'
   end
 
   def il_mio_birrificio
     @title = 'Il mio Birrificio'
-    @user = User.find(params[:id])
+    @user = current_user
     render 'il_mio_birrificio'
   end
 
   def in_cantina
     @title = 'In Cantina'
-    @user = User.find(params[:id])
+    @user = current_user
     render 'in_cantina'
   end
 
   def gusta
     @title = 'Gusta'
+    @user = current_user
+    render 'gusta'
   end
 
   def mercatino
     @title = 'Mercatino'
+    @user = current_user
+    render 'mercatino'
   end
 
   def gruppi
     @title = 'Gruppi'
-    @user = User.find(params[:id])
+    @user = current_user
     render 'gruppi'
   end
 

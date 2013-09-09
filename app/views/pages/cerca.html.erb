@@ -3,8 +3,6 @@
 
 <h1 id="arancione">Cerca</h1>
 
-
-
 <fieldset>
   <div id="ricerca">
   <p id="ricerca">Ricerca tramite:</p>
@@ -13,21 +11,22 @@
 
 <%= form_tag search_users_path, method: 'get', class: 'navbar-search pull-left' do %>
 <%# form_for @search do |f| %>
-    <p>
+      <p id="ricercautente">
       <%= label_tag :utenti %>
-      <%= text_field_tag :search, params[:search], class: 'search-query' %>
+      <%= text_field_tag :search, params[:search], class: 'search-query', placeholder: 'Search' %>
       <%= submit_tag "Search", id: "cercautenti",  class: 'btn btn-large btn-primary' %>
     </p>
 
      <p>
         <%= label_tag :gruppi %>
-        <%= text_field_tag :search, params[:search], class: 'search-query' %>
+        <%= text_field_tag :search, params[:search], class: 'search-query', placeholder: 'Search'  %>
        <%= submit_tag "Search",  class: 'btn btn-large btn-primary' %>
      </p>
+
      <p>
        <%= label_tag :tag %>
-       <%= text_field_tag :search, params[:search], class: 'search-query' %>
-       <%= submit_tag "Search",  class: 'btn btn-large btn-primary' %>
+       <%= text_field_tag :search, params[:search], class: 'search-query', placeholder: 'Search' %>
+       <%= submit_tag "Search",  class: 'btn btn-large btn-primary'  %>
      </p>
 
 <% end %>
@@ -35,3 +34,4 @@
   </div>
 
 </fieldset>
+

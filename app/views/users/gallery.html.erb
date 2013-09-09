@@ -1,11 +1,15 @@
 <div id="banner">
 
-    <div id="nomeutente">
+  <div id="nomeutente">
       <h3> <%= @user.name %> </h3>
     </div>
     <div id="infoutente">
     <h3 id="infoutente"> - <%= @user.chisei %> - </h3>
-        </div>
+  </div>
+  <div id="punteggioutente">
+    <h2 id="punteggioutente"> <%= @user.punteggio.to_i %> Punti  </h2>
+  </div>
+
   </div>
 
 

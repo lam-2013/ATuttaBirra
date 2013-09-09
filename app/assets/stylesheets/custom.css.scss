@@ -67,6 +67,15 @@ div#infoutente{
    text-align: center;
 }
 
+div#punteggioutente{
+  //float: left;
+  padding-left: 500px;
+  top: 255px;
+  position: relative;
+  //right: 10px;
+  text-align: center;
+}
+
 div#barramenu{
   width: 1500px;
   height: 500px;
@@ -110,14 +119,16 @@ h1#arancione{
    color: #ff800a;
 }
 
-#ricerca{
+#ricerca {
   label-align: left;
   color: #eaeaea;
   position: relative;
   right:0px;
   line-height: 5em;
+  line-break: 2em;
 
 }
+
 
 h1 {
   font-size: 3em;
