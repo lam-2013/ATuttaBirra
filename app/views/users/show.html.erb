@@ -1,16 +1,30 @@
+<% provide :title%>
+<div id="banner">
+
+  <div id="nomeutente">
+    <h3> <%= @user.name %> </h3>
+  </div>
+  <div id="infoutente">
+    <h3 id="infoutente"> - <%= @user.chisei %> -  </h3>
+  </div>
+  <div id="punteggioutente">
+    <h2 id="punteggioutente"> <%= @user.punteggio.to_i %> Punti  </h2>
+  </div>
+</div>
+
 <% #Provide the page title in a symbol to application.html.erb to avoid duplication %>
 <% provide :title, @user.name %>
 
 <div class="row">
   <aside class="span4">
     <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
+      <%#  <h1>
+         <%= gravatar_for @user %>
+      <%#  <h1>
+     <%= @user.name %>
 
-        <h2>Punteggio <%= @user.punteggio.to_i  %></h2>
-
-      </h1>
+      <%#  <h1>
+ </h1>           %>
 
       <p>
         <%= link_to "Amici", :action => "amici" %> <br>

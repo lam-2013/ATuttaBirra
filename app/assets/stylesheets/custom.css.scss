@@ -77,15 +77,80 @@ div#punteggioutente{
 }
 
 div#barramenu{
-  width: 1500px;
+  width: 1000px;
   height: 500px;
  // float: left;
-  background-image:  url('Menu.png');
+ /* background-image:  url('Icon/Menu.png');
   background-repeat: no-repeat;
-  background-size: 2000px, 400px;
-  background-origin: content-box;
-  position: relative;
+  background-size: 800px, 30px;
+  background-position: 60px;
+  position: relative;       */
+}
 
+nav#icone  {
+ // padding-left: 100px;
+ // padding-top: 200px;
+ // position: relative;
+  display: block;
+  width: 90%;
+  overflow: hidden;
+}
+
+nav#icone ul {
+  margin: 80px 0 20px 0;
+  padding: 1em;
+  float: left;
+  list-style: none;
+  background: #800004;
+  -moz-border-radius: .7em;
+  -webkit-border-radius: .7em;
+  border-radius: .7em;
+  -moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+  box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+}
+nav#icone li {
+  float:left;
+}
+
+nav#icone a {
+  float:left;
+  padding: .2em .8em;   //distanza tra le icone
+}
+
+nav#icone a:hover, nav#icone a:focus {
+  outline: 0;
+  background: #fac754;
+  background: -moz-linear-gradient(#fac754, #f8ac00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fac754), to(#f8ac00));
+  background: -webkit-linear-gradient(#fac754, #f8ac00);
+  background: -o-linear-gradient(#fac754, #f8ac00);
+  background: -ms-linear-gradient(#fac754, #f8ac00);
+  background: linear-gradient(#fac754, #f8ac00);
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+nav#icone a:active {
+  -moz-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+
+}
+
+nav#navheader ul a:hover, nav#navheader ul a:focus {
+  outline: 0;
+  background: #c00a00;
+  background: -moz-linear-gradient(#c00a00, #970004);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c00a00), to(#970004));
+  background: -webkit-linear-gradient(#c00a00, #970004);
+  background: -o-linear-gradient(#c00a00, #970004);
+  background: -ms-linear-gradient(#c00a00, #970004);
+  background: linear-gradient(#c00a00, #970004);
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
 }
 
 section {
@@ -120,14 +185,40 @@ h1#arancione{
 }
 
 #ricerca {
-  label-align: left;
   color: #eaeaea;
   position: relative;
-  right:0px;
   line-height: 5em;
-  line-break: 2em;
-
+  line-break: 20em;
 }
+
+
+#ricercautenti {
+  color: #eaeaea;
+  position: relative;
+  padding-right: 20px;
+  float: left;
+
+ }
+
+#ricercagruppi {
+  color: #eaeaea;
+  position: relative;
+  padding-right: 20px;
+  top: 40px;
+  bottom: 20px;
+  right: 196px;
+  float: left;
+}
+
+#ricercatag {
+  color: #eaeaea;
+  position: relative;
+  padding-right: 20px;
+  top: 60px;
+  padding-bottom: 50px;
+  float: left;
+}
+
 
 
 h1 {

@@ -4,18 +4,21 @@
 
 
 <div id="barramenu">
-  <nav>
 
-<%= link_to image_tag("Icon/ProfiloIcon.png", :size => "90x90"), current_user %>
-<%= link_to image_tag("Icon/AmiciIcon.png", :size => "90x90"), { :action => "amici", :controller => "users" }%>
-<%= link_to image_tag("Icon/GalleryIcon.png", :size => "90x90"),{ :action => "gallery", :controller => "users"  }%>
-<%= link_to image_tag("Icon/MessaggiIcon.png", :size => "90x90"), { :action => "messaggi", :controller => "users"  }%>
-<%= link_to image_tag("Icon/BirrificioIcon.png", :size => "90x90"), { :action => "il_mio_birrificio", :controller => "users" }%>
-<%= link_to image_tag("Icon/InCantinaIcon.png", :size => "90x90"), { :action => "in_cantina", :controller => "users"  }%>
-<%= link_to image_tag("Icon/GustaIcon.png", :size => "90x90"), { :action => "gusta", :controller => "users"  } %>
-<%= link_to image_tag("Icon/MercatinoIcon.png", :size => "90x90"), { :action => "mercatino", :controller => "users"  } %>
-<%= link_to image_tag("Icon/GruppiIcon.png", :size => "90x90"), { :action => "gruppi", :controller => "users"  } %>
+  <nav id="icone">
+    <ul>
 
+    <li><%= link_to image_tag("Icon/ProfiloIcon.png", :size => "70x70"), current_user %>   </li>
+    <li><%= link_to image_tag("Icon/AmiciIcon.png", :size => "70x70"), { :action => "amici", :controller => "users" }%> </li>
+    <li><%= link_to image_tag("Icon/GalleryIcon.png", :size => "70x70"),{ :action => "gallery", :controller => "users" }%> </li>
+    <li><%= link_to image_tag("Icon/MessaggiIcon.png", :size => "80x80"), { :action => "messaggi", :controller => "users" }%> </li>
+    <li><%= link_to image_tag("Icon/BirrificioIcon.png", :size => "70x70"), { :action => "il_mio_birrificio", :controller => "users" }%> </li>
+    <li><%= link_to image_tag("Icon/InCantinaIcon.png", :size => "90x90"), { :action => "in_cantina", :controller => "users" }%> </li>
+    <li><%= link_to image_tag("Icon/GustaIcon.png", :size =>"60x60"), { :action => "gusta", :controller => "users" } %> </li>
+    <li><%= link_to image_tag("Icon/MercatinoIcon.png", :size => "80x80"), { :action => "mercatino", :controller => "users" }%> </li>
+    <li><%= link_to image_tag("Icon/GruppiIcon.png", :size => "60x60"), { :action => "gruppi", :controller => "users" }%> </li>
+
+    </ul>
   </nav>
 
 </div>
