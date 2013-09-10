@@ -13,13 +13,14 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation, :cognome
+  attr_accessible :email, :name, :password, :password_confirmation, :cognome, :chisei
 
   # basically, the method realizes the authentication system
   has_secure_password
 
   # each user can have some posts associated and they must be destroyed together with the user
   has_many :posts, dependent: :destroy
+  has_many :nometag
 
   # each user can have many relationships
   # we need to explicitly define a foreign key since, otherwise, Rails looks for a relationship_id column (that not exists)
@@ -35,6 +36,7 @@ class User < ActiveRecord::Base
   # each user can have many followers, through reverse relationships
   has_many :followers, through: :reverse_relationships
 
+
   # put the email in downcase before saving the user
   before_save { |user| user.email = email.downcase }
   # call the create_remember_token private method before saving the user
@@ -42,7 +44,7 @@ class User < ActiveRecord::Base
 
   # name must be always present and with a maximum length of 50 chars
   validates :name, presence: true, length: { maximum: 50 };
-  validates :cognome, presence: true, length: { maximum: 50 };
+
   # email allowed format representation (expressed as a regex)
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+.[a-z]+\z/i
 
@@ -54,7 +56,6 @@ class User < ActiveRecord::Base
 
   # password_confirmation must be always present
   validates :password_confirmation, presence: true
-
 
   # is the current user following the given user?
   def following?(other_user)

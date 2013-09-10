@@ -76,15 +76,13 @@ div#punteggioutente{
   text-align: center;
 }
 
+// barra personale
+
 div#barramenu{
   width: 1000px;
   height: 500px;
- // float: left;
- /* background-image:  url('Icon/Menu.png');
-  background-repeat: no-repeat;
-  background-size: 800px, 30px;
-  background-position: 60px;
-  position: relative;       */
+
+
 }
 
 nav#icone  {
@@ -101,7 +99,7 @@ nav#icone ul {
   padding: 1em;
   float: left;
   list-style: none;
-  background: #800004;
+  background: #660000;
   -moz-border-radius: .7em;
   -webkit-border-radius: .7em;
   border-radius: .7em;
@@ -139,6 +137,69 @@ nav#icone a:active {
 
 }
 
+// barra amico
+
+div#barramenu_amico{
+  width: 290px;
+  height: 800px;
+}
+
+nav#icone_amico  {
+  padding-left: 60px;
+ // padding-top: 20px;
+  // position: relative;
+  display: block;
+  width: 40%;
+  overflow: hidden;
+}
+
+nav#icone_amico ul {
+  margin: 80px 20px 20px 10px;
+  padding: 1em;
+ // float: left;
+  list-style: none;
+  background: #ffa10e;
+  -moz-border-radius: .7em;
+  -webkit-border-radius: .7em;
+  border-radius: .7em;
+  -moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+  box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
+}
+nav#iconeamico li {
+  padding: 1em 1em;
+
+ // float:left;
+}
+
+nav#iconeamico a {
+  float:left;
+  padding: .8em .2em; //distanza tra le icone
+}
+
+nav#icone_amico a:hover, nav#icone a:focus {
+  background: #fac754;
+  background: -moz-linear-gradient(#fac754, #f8ac00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fac754), to(#f8ac00));
+  background: -webkit-linear-gradient(#fac754, #f8ac00);
+  background: -o-linear-gradient(#fac754, #f8ac00);
+  background: -ms-linear-gradient(#fac754, #f8ac00);
+  background: linear-gradient(#fac754, #f8ac00);
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+nav#icone_amico a:active {
+  -moz-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
+
+}
+
+
+
+// header
 nav#navheader ul a:hover, nav#navheader ul a:focus {
   outline: 0;
   background: #c00a00;
@@ -218,6 +279,38 @@ h1#arancione{
   padding-bottom: 50px;
   float: left;
 }
+
+#pic{
+  position: relative;
+}
+
+#pic ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#pic a:hover{
+  border: 4px solid #0200ff;
+  border-radius: 3px 3px 3px 3px;
+}
+
+ a#pic_incantina{
+  position: absolute;
+  width: 285px;
+  height: 166px;
+  top: 253px;
+  left: 0px;
+}
+
+ a#pic_gusta{
+  position: absolute;
+  width: 285px;
+  height: 190px;
+  top: 210px;
+  left: 32px;
+}
+
 
 
 

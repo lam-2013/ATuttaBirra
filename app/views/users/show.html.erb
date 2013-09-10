@@ -9,6 +9,7 @@
   </div>
   <div id="punteggioutente">
     <h2 id="punteggioutente"> <%= @user.punteggio.to_i %> Punti  </h2>
+
   </div>
 </div>
 
@@ -25,19 +26,27 @@
 
       <%#  <h1>
  </h1>           %>
+      <% if current_user.following?(@user) %>
+          <div id="barramenu_amico">
 
-      <p>
-        <%= link_to "Amici", :action => "amici" %> <br>
-        <%= link_to "Gallery", :action => "gallery" %>       <br>
-        <%= link_to "Messaggi", :action => "messaggi" %>     <br>
-        <%= link_to "Il mio Birrificio", :action => "il_mio_birrificio" %> <br>
-        <%= link_to "In Cantina", :action => "in_cantina" %> <br>
-        <%= link_to "Gusta", :action => "gusta" %>       <br>
-        <%= link_to "Mercatino", :action => "mercatino" %>    <br>
-        <%= link_to "Gruppi", :action => "gruppi" %>
+            <nav id="icone_amico">
+              <ul>
 
+                <li><%= link_to image_tag("Icon/ProfiloIcon.png", :size => "50x50"), @users %>   </li>
+                <li><%= link_to image_tag("Icon/AmiciIcon.png", :size => "50x50"), { :action => "amici", :controller => "users" }%> </li>
+                <li><%= link_to image_tag("Icon/GalleryIcon.png", :size => "50x50"),{ :action => "gallery", :controller => "users" }%> </li>
+                <li><%= link_to image_tag("Icon/MessaggiIcon.png", :size => "60x60"), { :action => "messaggi", :controller => "users" }%> </li>
+                <li><%= link_to image_tag("Icon/BirrificioIcon.png", :size => "50x50"), { :action => "il_mio_birrificio", :controller => "users" }%> </li>
+                <li><%= link_to image_tag("Icon/InCantinaIcon.png", :size => "70x70"), { :action => "in_cantina", :controller => "users" }%> </li>
+                <li><%= link_to image_tag("Icon/GustaIcon.png", :size =>"40x40"), { :action => "gusta", :controller => "users" } %> </li>
+                <li><%= link_to image_tag("Icon/MercatinoIcon.png", :size => "60x60"), { :action => "mercatino", :controller => "users" }%> </li>
+                <li><%= link_to image_tag("Icon/GruppiIcon.png", :size => "40x40"), { :action => "gruppi", :controller => "users" }%> </li>
 
-      </p>
+              </ul>
+            </nav>
+
+          </div>
+      <% end %>
 
     </section>
     <section>
@@ -55,5 +64,7 @@
       <% # since we are in a Users view, we need to specify that the pagination is for the posts %>
       <% will_paginate @posts %>
     <% end %>
-  </div>
+
+
 </div>
+   </div>

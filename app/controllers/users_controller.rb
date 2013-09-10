@@ -9,9 +9,9 @@ class UsersController < ApplicationController
   def show
     # get the user with id :id
     @user = User.find(params[:id])
-
     # get and paginate the posts associated to the specified user
     @posts = @user.posts.paginate(page: params[:page])
+
   end
 
   def new
@@ -87,6 +87,8 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+
+
   # Paginated search for users
   def search
     @users = User.search(params[:search]).paginate(page: params[:page])
@@ -138,6 +140,18 @@ class UsersController < ApplicationController
     @title = 'Gruppi'
     @user = current_user
     render 'gruppi'
+  end
+
+  def dettaglio_incantina
+    @title = 'Dettaglio'
+    @user = current_user
+    render 'dettaglio_incantina'
+  end
+
+  def dettaglio_gusta
+    @title = 'Dettaglio'
+    @user = current_user
+    render 'dettaglio_gusta'
   end
 
   private
