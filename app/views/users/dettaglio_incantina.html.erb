@@ -1,7 +1,19 @@
 <% provide :title, 'Dettaglio' %>
 
+<% if current_user %>
+
+
 <div id="votazione">
 
-
+  <ul>
+    <h4>Vota</h4>
+    <li><%= link_to 'Uno', title= 'I hate it', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
+    <li><%= link_to 'Due', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
+    <li><%= link_to 'Tre', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
+    <li><%= link_to 'Quattro', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
+  </ul>
 
 </div>
+<% else %>
+
+  <% end %>

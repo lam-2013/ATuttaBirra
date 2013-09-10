@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20130606064234) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin"
+    t.string   "chisei"
   end
 
   create_table "tags", :force => true do |t|

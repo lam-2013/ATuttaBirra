@@ -1,7 +1,10 @@
 <% provide :title, 'Amici' %>
 <div id="banner">
 
-  <div id="nomeutente">
+  <% if current_user?(@user) %>
+      <%  @user = User.find(params[:id])  %>
+  <% end %>
+      <div id="nomeutente">
     <h3> <%= @user.name %> </h3>
   </div>
   <div id="infoutente">
@@ -18,3 +21,4 @@
   <h2> - Amici - </h2>
   <%= image_tag ("Amici.png") %>
 </div>
+

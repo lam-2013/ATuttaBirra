@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+
+<script type="text/javascript">
+
+function mostraAccount_menu(barramenu){
+        if (document.getElementById){
+            if(document.getElementById(id).style.display == 'none'){
+                document.getElementById(id).style.display = 'block';
+            } else {
+    document.getElementById(id).style.display = 'none';
+    }
+}
+}
+
+</script>

@@ -14,6 +14,7 @@ class PagesController < ApplicationController
   end
 
   def account_menu
+
   end
 
 

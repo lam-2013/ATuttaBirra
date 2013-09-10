@@ -114,43 +114,43 @@ class UsersController < ApplicationController
 
   def il_mio_birrificio
     @title = 'Il mio Birrificio'
-    @user = current_user
+    @user = current_user.id
     render 'il_mio_birrificio'
   end
 
   def in_cantina
     @title = 'In Cantina'
-    @user = current_user
+    @user = current_user.id
     render 'in_cantina'
   end
 
   def gusta
     @title = 'Gusta'
-    @user = current_user
+    @user = current_user.id
     render 'gusta'
   end
 
   def mercatino
     @title = 'Mercatino'
-    @user = current_user
+    @user = current_user.id
     render 'mercatino'
   end
 
   def gruppi
     @title = 'Gruppi'
-    @user = current_user
+    @user = current_user.id
     render 'gruppi'
   end
 
   def dettaglio_incantina
     @title = 'Dettaglio'
-    @user = current_user
+    @user = current_user.id
     render 'dettaglio_incantina'
   end
 
   def dettaglio_gusta
     @title = 'Dettaglio'
-    @user = current_user
+    @user = current_user.id
     render 'dettaglio_gusta'
   end
 
