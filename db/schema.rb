@@ -51,4 +51,12 @@ ActiveRecord::Schema.define(:version => 20130606064234) do
 
   end
 
+  create_table "voto", :force => true do |t|
+    t.integer  "votante"
+    t.integer  "votato"
+    t.string   "oggetto"
+    t.integer  "voto"
+
+  end
+
 end

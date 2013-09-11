@@ -1,0 +1,9 @@
+<% unless current_user?(@user) %>
+    <div>
+      <% if current_user.id != @user1.id %>
+          <%= render 'vota' %>
+      <% else %>
+          <%= render 'saluti' %>
+      <% end %>
+    </div>
+<% end %>

@@ -36,6 +36,7 @@ class User < ActiveRecord::Base
   # each user can have many followers, through reverse relationships
   has_many :followers, through: :reverse_relationships
 
+  has_many :voto
 
   # put the email in downcase before saving the user
   before_save { |user| user.email = email.downcase }
@@ -84,6 +85,11 @@ class User < ActiveRecord::Base
     else
       scoped # return an empty result set
     end
+  end
+
+  def vote!(other_user)
+    voto.create!(votato: other_user.id)
+
   end
 
 

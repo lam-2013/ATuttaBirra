@@ -1,11 +1,17 @@
 <% #Provide the page title in a symbol to application.html.erb to avoid duplication %>
 <% provide :title, 'In Cantina' %>
 
-<div id="pic">
-  <%= image_tag ("InCantina.png") %>
+<div id="pic_incantina">
+  <%= image_tag("InCantina/InCantina.png") %>
  <ul>
-   <li class="PrimaBirra">
-     <a id="pic_incantina" href="/users/1/dettaglio_incantina"> </a>
+   <li id="1Incantina">
+    <%#  <a id="pic_incantina" href="/users/dettaglio_incantina"> </a>  %>
+   <%= link_to image_tag("InCantina/1Incantina.png", :size => "285x166"), { :action => "dettaglio_incantina", :controller => "users" }%>
+
+   </li>
+   <li id="2Incantina">
+     <%#  <a id="pic_incantina" href="/users/dettaglio_incantina"> </a>  %>
+     <%= link_to image_tag("InCantina/2Incantina.png", :size => "285x166"), { :action => "dettaglio_incantina2", :controller => "users" }%>
    </li>
  </ul>
 </div>
