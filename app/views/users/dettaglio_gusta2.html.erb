@@ -1,0 +1,12 @@
+<% provide :title, 'Dettaglio' %>
+
+<div id="img_dettaglio">
+  <%= image_tag ("Gusta/2GustaDettaglio.png") %>
+  <a id="img_dettaglio" href="" onclick="history.back()"> </a>
+</div>
+
+
+<div>
+  <%= render 'voto_form' if current_user.id != @user1.id %>
+
+</div>

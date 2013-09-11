@@ -164,6 +164,14 @@ class UsersController < ApplicationController
     render 'dettaglio_gusta'
   end
 
+  def dettaglio_gusta2
+    @title = 'Dettaglio'
+    @user1=  User.find(params[:id])
+    @user = current_user.id
+    render 'dettaglio_gusta2'
+  end
+
+
 
   private
 

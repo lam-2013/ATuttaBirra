@@ -1,47 +1,18 @@
 <% provide :title, @user.name %>
 <div id="banner">
 
-  <div id="nomeutente">
-    <h3> <%= @user.name %> </h3>
-  </div>
-  <div id="infoutente">
-    <h3 id="infoutente"> - <%= @user.chisei %> -  </h3>
-  </div>
-  <div id="punteggioutente">
-    <h2 id="punteggioutente"> <%= @user.punteggio.to_i %> Punti  </h2>
-
-  </div>
+  <%= render 'shared/infoutente' %>
 </div>
 
 
 
 <div class="row">
   <aside class="span4">
+
     <section>
-
-      <% if current_user.following?(@user) %>
-          <div id="barramenu_amico">
-
-            <nav id="iconeamico">
-              <ul>
-
-                <li><%= link_to image_tag("Icon/ProfiloIcon.png", :size => "50x50"), @users %>   </li>
-                <li><%= link_to image_tag("Icon/AmiciIcon.png", :size => "50x50"), { :action => "amici", :controller => "users" }%> </li>
-                <li><%= link_to image_tag("Icon/GalleryIcon.png", :size => "50x50"),{ :action => "gallery", :controller => "users" }%> </li>
-                <li><%= link_to image_tag("Icon/MessaggiIcon.png", :size => "60x60"), { :action => "messaggi", :controller => "users" }%> </li>
-                <li><%= link_to image_tag("Icon/BirrificioIcon.png", :size => "50x50"), { :action => "il_mio_birrificio", :controller => "users" }%> </li>
-                <li><%= link_to image_tag("Icon/InCantinaIcon.png", :size => "70x70"), { :action => "in_cantina", :controller => "users" }%> </li>
-                <li><%= link_to image_tag("Icon/GustaIcon.png", :size =>"40x40"), { :action => "gusta", :controller => "users" } %> </li>
-                <li><%= link_to image_tag("Icon/MercatinoIcon.png", :size => "60x60"), { :action => "mercatino", :controller => "users" }%> </li>
-                <li><%= link_to image_tag("Icon/GruppiIcon.png", :size => "40x40"), { :action => "gruppi", :controller => "users" }%> </li>
-
-              </ul>
-            </nav>
-
-          </div>
-      <% end %>
-
+          <%= render 'shared/barra_amico' %>
     </section>
+
     <section>
       <%= render 'shared/stats' %>
     </section>

@@ -1,3 +1,52 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#home {
+  background-image: url('Beer_Mug.JPG');
+  background-attachment: fixed;
+  background-size: 100% 105%;
+  padding-top: 60px;
+  text-shadow: 3px 4px 3px #000;
+}
+
+div#classhome{
+  background: transparent;
+
+}
+
+// pagina cerca
+#ricerca {
+  color: #eaeaea;
+  position: relative;
+  line-height: 5em;
+  line-break: 20em;
+}
+
+
+#ricercautenti {
+  color: #eaeaea;
+  position: relative;
+  padding-right: 20px;
+  float: left;
+
+}
+
+#ricercagruppi {
+  color: #eaeaea;
+  position: relative;
+  padding-right: 20px;
+  top: 40px;
+  bottom: 20px;
+  right: 196px;
+  float: left;
+}
+
+#ricercatag {
+  color: #eaeaea;
+  position: relative;
+  padding-right: 20px;
+  top: 60px;
+  padding-bottom: 50px;
+  float: left;
+}

@@ -21,6 +21,7 @@ function mostraAccount_menu(){
             document.getElementById("barramenu").style.display = 'block';
         } else {
             document.getElementById("barramenu").style.display = 'none';
+
         }
     }
 }

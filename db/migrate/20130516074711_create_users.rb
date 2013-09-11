@@ -6,6 +6,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
       t.string :datanascita
       t.string :città
+      t.string :chisei
+      t.integer :punteggio
 
       t.timestamps
     end

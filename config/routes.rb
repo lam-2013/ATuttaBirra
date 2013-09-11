@@ -21,7 +21,7 @@ SWorD::Application.routes.draw do
     # member: apply the reported actions to each single member (to /users/{:id}, in this case)
     member do
       get :following, :followers, :amici, :gallery, :messaggi, :il_mio_birrificio, :in_cantina, :gusta,
-            :mercatino, :gruppi, :dettaglio_incantina, :dettaglio_gusta, :dettaglio_incantina2# ex.: get /users/1/followers
+            :mercatino, :gruppi, :dettaglio_incantina, :dettaglio_incantina2, :dettaglio_gusta, :dettaglio_gusta2 # ex.: get /users/1/followers
     end
     # collection: apply the reported action to the entire collection (to /users/, in this case)
     collection do
