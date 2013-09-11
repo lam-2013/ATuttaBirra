@@ -11,7 +11,7 @@ SWorD::Application.routes.draw do
   match '/signin', to: 'sessions#new'
   # signout should be performed by using the HTTP DELETE request
   match '/signout', to: 'sessions#destroy', via: :delete
-  match '/account_menu', to: 'pages#account_menu'
+
 
 
   # routes for the Users controller (default plus following, followers and search)
@@ -20,13 +20,12 @@ SWorD::Application.routes.draw do
   resources :users do
     # member: apply the reported actions to each single member (to /users/{:id}, in this case)
     member do
-      get :following, :followers, :amici, :gallery, :messaggi, :il_mio_birrificio,
-          :in_cantina, :gusta, :mercatino, :gruppi, :dettaglio_incantina # ex.: get /users/1/followers
+      get :following, :followers, :amici, :gallery, :messaggi, :il_mio_birrificio, :in_cantina, :gusta,
+            :mercatino, :gruppi, :dettaglio_incantina, :dettaglio_gusta# ex.: get /users/1/followers
     end
     # collection: apply the reported action to the entire collection (to /users/, in this case)
     collection do
-      get :search, :amici, :gallery, :messaggi, :il_mio_birrificio,
-          :in_cantina, :gusta, :mercatino, :gruppi, :dettaglio_incantina, :dettaglio_gusta
+      get :search
     end
   end
 

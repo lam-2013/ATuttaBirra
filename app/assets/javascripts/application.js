@@ -15,16 +15,12 @@
 //= require bootstrap
 //= require_tree .
 
-<script type="text/javascript">
-
-function mostraAccount_menu(barramenu){
-        if (document.getElementById){
-            if(document.getElementById(id).style.display == 'none'){
-                document.getElementById(id).style.display = 'block';
-            } else {
-    document.getElementById(id).style.display = 'none';
+function mostraAccount_menu(){
+    if (document.getElementById("barramenu")){
+        if(document.getElementById("barramenu").style.display == 'none'){
+            document.getElementById("barramenu").style.display = 'block';
+        } else {
+            document.getElementById("barramenu").style.display = 'none';
+        }
     }
 }
-}
-
-</script>

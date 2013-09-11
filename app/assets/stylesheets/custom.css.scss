@@ -80,7 +80,12 @@ div#punteggioutente{
 
 div#barramenu{
   width: 1000px;
-  height: 250px;
+  height: 200px;
+  position: fixed;
+  top: 400px;
+  z-index: 6;
+  left: 18%;
+
 
 
 }
@@ -209,8 +214,7 @@ nav#iconeamico a:active {
 
 
 // header
-nav#navheader ul a:hover, nav#navheader ul a:focus {
-  outline: 0;
+nav#navheader ul a:hover, nav#navheader ul a:focus  {
   background: #c00a00;
   background: -moz-linear-gradient(#c00a00, #970004);
   background: -webkit-gradient(linear, left top, left bottom, from(#c00a00), to(#970004));
@@ -223,48 +227,72 @@ nav#navheader ul a:hover, nav#navheader ul a:focus {
   border-radius: 4px 4px 4px 4px;
 }
 
+nav#navheader ul a:visited {
+  background: none;
+}
 
- // votazione
+
+  // votazione
 div#votazione{
   color: white;
-  width: 1000px;
-  height: 500px;
-  padding-left: 60px;
+  width: 900px;
+  height: 400px;
+  padding-left: 40px;
+  padding-top: 70px;
   // padding-top: 20px;
   // position: relative;
   display: block;
-  width: 40%;
+  width: 60%;
+  height: 50%;
   overflow: hidden;
 }
 
 div#votazione ul {
-  margin: 20px 20px 20px 20px;
+  color: white;
+  margin: 5px 3px 5px 3px;
   padding: 1em;
   float: left;
   list-style: none;
-  background: #1e00c6;
-  -moz-border-radius: .7em;
-  -webkit-border-radius: .7em;
-  border-radius: .7em;
+  background: rgba(0, 44, 244, 0.92);
+  -moz-border-radius: .2em;
+  -webkit-border-radius: .2em;
+  border-radius: .2em;
   -moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
   -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
   box-shadow: 0 1px 0 rgba(255,255,255,.2), 0 2px 1px rgba(0,0,0,.8) inset;
 }
 div#votazione li {
-  padding: 1em 1em;
-   float:left;
+  color: white;
+  padding: .1em .4em;    //distanza tra le icone
+  float:left;
 }
 
 div#votazione a {
+  background:  #c00a00;
+  color: white;
   float:left;
-  padding: .8em .2em; //distanza tra le icone
+  padding: .5em 1em; //distanza delle icone nelle caselle
+  border-radius: 2px 2px 2px 2px;
+
 
 }
 
-div#votazione a:hover {
-
+div#votazione a:hover, div#votazione a:focus {
+  font-weight: bold;
+  color: white;
+  float: left;
+  text-decoration: none;
+  background: #c00a00;
+  background: -moz-linear-gradient(#c00a00, #970004);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c00a00), to(#970004));
+  background: -webkit-linear-gradient(#c00a00, #970004);
+  background: -o-linear-gradient(#c00a00, #970004);
+  background: -ms-linear-gradient(#c00a00, #970004);
+  background: linear-gradient(#c00a00, #970004);
+  -moz-border-radius: 2px 2px 2px 2px;
+  -webkit-border-radius: 2px 2px 2px 2px;
+  border-radius: 2px 2px 2px 2px;
 }
-
 
 
 section {
@@ -399,7 +427,7 @@ p {
 /* footer */
 
 footer {
-  margin-top: 130px;
+  margin-top: 200px;
 
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;

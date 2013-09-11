@@ -114,13 +114,13 @@ class UsersController < ApplicationController
 
   def il_mio_birrificio
     @title = 'Il mio Birrificio'
-    @user = current_user.id
+    @user = current_user
     render 'il_mio_birrificio'
   end
 
   def in_cantina
     @title = 'In Cantina'
-    @user = current_user.id
+    @user = current_user
     render 'in_cantina'
   end
 
@@ -144,12 +144,14 @@ class UsersController < ApplicationController
 
   def dettaglio_incantina
     @title = 'Dettaglio'
+    @user1=  User.find(params[:id])
     @user = current_user.id
     render 'dettaglio_incantina'
   end
 
   def dettaglio_gusta
     @title = 'Dettaglio'
+    @user1=  User.find(params[:id])
     @user = current_user.id
     render 'dettaglio_gusta'
   end

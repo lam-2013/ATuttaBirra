@@ -13,9 +13,5 @@ class PagesController < ApplicationController
   def cerca
   end
 
-  def account_menu
-
-  end
-
 
 end
