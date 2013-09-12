@@ -12,17 +12,9 @@
 <%= form_tag search_users_path, method: 'get' do %>
 <%# form_for @search do |f| %>
 
-    <div id="ricercautenti">
-   <p id="ricercautenti">
-<%= label_tag :utenti %>
-</p>
-<p id="ricercautenti">
- <%= text_field_tag :search, params[:search], class: 'search-query', placeholder: 'Search' %>
-</p>
-<p id="ricercautenti">
-<%= submit_tag "Search",  class: 'btn btn-large btn-primary' %>
-</p>
-  </div>
+
+<%= render 'users/search_form' %>
+
 
 
     <div id="ricercagruppi">
@@ -33,22 +25,11 @@
 <%= text_field_tag :search, params[:search], class: 'search-query', placeholder: 'Search'  %>
 </p>
 <p id="ricercagruppi">
-<%= submit_tag "Search",  class: 'btn btn-large btn-primary' %>
+<%= submit_tag "Search", disabled: true, class: 'btn btn-large btn-primary' %>
 </p>
   </div>
 
-
-    <div id="ricercatag">
-<p id="ricercatag">
-<%= label_tag :tag %>
-</p>
-<p id="ricercatag">
-<%= text_field_tag :search, params[:search], class: 'search-query', placeholder: 'Search' %>
-</p>
-<p id="ricercatag">
-<%= submit_tag "Search",  class: 'btn btn-large btn-primary'  %>
-</p>
-   </div>
+      <%= render 'users/search_form_tag' %>
 
 <% end %>
 

@@ -4,12 +4,22 @@ class VotoController  < ApplicationController
 
   respond_to :html, :js
 
-  def create
-    @user = User.find(params[:voto][:votato])
-    current_user.vote!(@user)
+
+  def show_voto
+    @voto = Votazione.find(params[:id])
+  #  @voto = Votazione.find(params[:id])
+
+  end
+
+  def create_voto
+    @voto = Votazione.new(params [:votato][:votante])
+    @voto.user_id = current_user
+    @user1 = User.find(params[:id])
+  #  current_user.vote!(@user)
     # without javascript: redirect_to @user
     respond_with @user
 
   end
+
 
 end

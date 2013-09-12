@@ -8,6 +8,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :città
       t.string :chisei
       t.integer :punteggio
+      t.string  :tag1
+      t.string  :tag2
+      t.string  :tag3
 
       t.timestamps
     end

@@ -8,8 +8,12 @@
           <li><%= link_to image_tag("Icon/AmiciIcon.png", :size => "60x60"), { :action => "amici", :controller => "users" }%> </li>
           <li><%= link_to image_tag("Icon/GalleryIcon.png", :size => "50x50"),{ :action => "gallery", :controller => "users" }%> </li>
           <li><%= link_to image_tag("Icon/MessaggiIcon.png", :size => "60x60"), { :action => "messaggi", :controller => "users" }%> </li>
+          <% if @user.chisei == 'Mastro Birraio' %>
           <li><%= link_to image_tag("Icon/BirrificioIcon.png", :size => "50x50"), { :action => "il_mio_birrificio", :controller => "users" }%> </li>
+          <% end %>
+          <% if @user.chisei != 'Appassionato di birra' %>
           <li><%= link_to image_tag("Icon/InCantinaIcon.png", :size => "60x60"), { :action => "in_cantina", :controller => "users" }%> </li>
+          <% end %>
           <li><%= link_to image_tag("Icon/GustaIcon.png", :size =>"40x40"), { :action => "gusta", :controller => "users" } %> </li>
           <li><%= link_to image_tag("Icon/MercatinoIcon.png", :size => "60x60"), { :action => "mercatino", :controller => "users" }%> </li>
           <li><%= link_to image_tag("Icon/GruppiIcon.png", :size => "40x40"), { :action => "gruppi", :controller => "users" }%> </li>

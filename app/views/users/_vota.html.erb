@@ -1,10 +1,10 @@
-<!--   <%# if current_user.id != @user1.id %>
+<%# if current_user.id != @user1.id %>
 
 
 <% # linked to the create action in the Relationship controller %>
 <%#= form_for(current_user.voto.build(votato: @user.id), remote: true) do |f| %>
     <%# # the hidden field contains the information needed for following a user %>
-    <div><%#= f.hidden_field :votato %></div>
+<%#=     <div><%#= f.hidden_field :votato %>  %>
     <%#= f.submit 'Mi piace', class: 'btn btn-large btn-primary' %>
 <%# end %>
 
@@ -20,6 +20,13 @@
         <li><%= link_to 'Like it!', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
         <li><%= link_to 'Love it!', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
       </ul>
+
+
+
+  <% if @user != current_user %>
+
+      <%= @voto.votante %>
+  <% end %>
 
 </div>
 

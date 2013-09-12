@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ATuttaBirra::Application.load_tasks
+SWorD::Application.load_tasks

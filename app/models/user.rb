@@ -13,14 +13,13 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation, :cognome, :chisei
+  attr_accessible :email, :name, :password, :password_confirmation, :cognome, :chisei, :tag1, :tag2, :tag3
 
   # basically, the method realizes the authentication system
   has_secure_password
 
   # each user can have some posts associated and they must be destroyed together with the user
   has_many :posts, dependent: :destroy
-  has_many :nometag
 
   # each user can have many relationships
   # we need to explicitly define a foreign key since, otherwise, Rails looks for a relationship_id column (that not exists)
@@ -36,7 +35,8 @@ class User < ActiveRecord::Base
   # each user can have many followers, through reverse relationships
   has_many :followers, through: :reverse_relationships
 
-  has_many :voto
+  has_many :voto, foreign_key: 'votante', class_name: 'Votazione'
+  has_many :voto, foreign_key: 'votato', class_name: 'Votazione'
 
   # put the email in downcase before saving the user
   before_save { |user| user.email = email.downcase }

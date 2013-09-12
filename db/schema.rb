@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606064234) do
+ActiveRecord::Schema.define(:version => 20130912080041) do
 
   create_table "posts", :force => true do |t|
     t.string   "content"
@@ -33,7 +33,17 @@ ActiveRecord::Schema.define(:version => 20130606064234) do
   add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
 
+  create_table "tags", :primary_key => "idtag", :force => true do |t|
+    t.string   "nometag"
+    t.integer  "idutente"
+    t.datetime "usato_il"
+  end
+
   create_table "users", :force => true do |t|
+    t.integer  "punteggio"
+    t.string   "chisei"
+    t.string   "citta"
+    t.string   "datanascita",     :limit => 10
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"
@@ -41,22 +51,16 @@ ActiveRecord::Schema.define(:version => 20130606064234) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin"
-    t.string   "chisei"
-  end
-
-  create_table "tags", :force => true do |t|
-    t.string   "nometag"
-    t.integer  "idutente"
-    t.datetime "usato_il"
-
+    t.string   "tag1"
+    t.string   "tag2"
+    t.string   "tag3"
   end
 
   create_table "voto", :force => true do |t|
-    t.integer  "votante"
-    t.integer  "votato"
-    t.string   "oggetto"
-    t.integer  "voto"
-
+    t.integer "votante"
+    t.integer "votato"
+    t.string  "oggetto"
+    t.integer "voto"
   end
 
 end

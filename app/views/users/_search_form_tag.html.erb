@@ -1,0 +1,13 @@
+<div id="ricercatag">
+<p id="ricercatag">
+<%= label_tag :tag %>
+</p>
+<%= form_tag search_users_path, method: 'get', class: 'navbar-search pull-left' do %>
+<p id="ricercatag">
+<%= text_field_tag :search, params[:search], class: 'search-query', placeholder: 'Search' %>
+</p>
+<p id="ricercatag">
+<%= submit_tag "Search",  class: 'btn btn-large btn-primary'  %>
+</p>
+<% end %>
+</div>

@@ -120,25 +120,28 @@ class UsersController < ApplicationController
 
   def in_cantina
     @title = 'In Cantina'
+    @user1=  User.find(params[:id])
     @user = current_user
     render 'in_cantina'
   end
 
   def gusta
     @title = 'Gusta'
-    @user = current_user.id
+    @user1=  User.find(params[:id])
+    @user = current_user
     render 'gusta'
   end
 
   def mercatino
     @title = 'Mercatino'
-    @user = current_user.id
+    @user1=  User.find(params[:id])
+    @user = current_user
     render 'mercatino'
   end
 
   def gruppi
     @title = 'Gruppi'
-    @user = current_user.id
+    @user = current_user
     render 'gruppi'
   end
 
