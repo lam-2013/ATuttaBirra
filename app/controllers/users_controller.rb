@@ -97,7 +97,7 @@ class UsersController < ApplicationController
   end
 
   def search_tag
-    @users = User.search_tag(params[:search_tag]).paginate(page: params[:page])
+    @users = User.search_tag(params[:search_tag]).order('punteggio DESC').paginate(page: params[:page])
     render 'search_tag'
   end
 

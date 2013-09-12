@@ -8,9 +8,11 @@
 
 <div id="tagutente">
   <ul>
-   <li> <% if !@user.tag1.blank? %>
-        <h3 id="tagutente"> <%= link_to @user.tag1, 'search_tag' %> </h3>
-    <% end %></li>
+   <li>
+     <% if !@user.tag1.blank? %>
+        <h3 id="tagutente"> <%= link_to @user.tag1 %> </h3>
+    <% end %>
+     </li>
     <li><% if !@user.tag2.blank? %>
         <h3 id="tagutente"><%= link_to @user.tag2, 'search_tag' %> </h3>
     <% end %></li>

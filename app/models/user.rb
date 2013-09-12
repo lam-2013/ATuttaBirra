@@ -83,29 +83,24 @@ class User < ActiveRecord::Base
     if user_name
       where('name LIKE ?', "%#{user_name}%")
     else
-      scoped # return an empty result set
+      scoped  # return an empty result set
     end
   end
 
 
   def self.search_tag(tag_name)
     if tag_name
-      where('tag1 LIKE ?', "%#{tag_name}%")
+     User.where('tag1 || tag2 || tag3 LIKE ?', "%#{tag_name}%")
+     # find(:all, :conditions =>['tag1 LIKE ? || tag2 LIKE ? || tag3 LIKE ?', "%#{tag_name}%", "%#{tag_name}%", "%#{tag_name}%"])
     else
-      scoped # return an empty result set
+      scoped
     end
   end
-
-
 
   def vote!(other_user)
     voto.create!(votato: other_user.id)
 
   end
-
-
-
-
 
   # private methods
   private

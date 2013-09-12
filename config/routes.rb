@@ -1,8 +1,4 @@
 SWorD::Application.routes.draw do
-
-  resources :votos
-
-
   # route for the homepage
   root :to => 'pages#home'
 
@@ -14,9 +10,6 @@ SWorD::Application.routes.draw do
   match '/signin', to: 'sessions#new'
   # signout should be performed by using the HTTP DELETE request
   match '/signout', to: 'sessions#destroy', via: :delete
-
-
-
 
   # routes for the Users controller (default plus following, followers and search)
 
