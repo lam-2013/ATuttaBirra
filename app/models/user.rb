@@ -87,6 +87,7 @@ class User < ActiveRecord::Base
     end
   end
 
+
   def self.search_tag(tag_name)
     if tag_name
       where('tag1 LIKE ?', "%#{tag_name}%")
