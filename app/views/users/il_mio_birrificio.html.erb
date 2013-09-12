@@ -7,16 +7,21 @@
   <%= render 'shared/infoutente' %>
 </div>
 
-<div class="row">
-  <aside class="span4">
-    <section>
-      <%= render 'shared/barra_amico' %>
-    </section>
-  </aside>
-
-  <div class="span8">
-    <h2> - Il mio Birrificio - </h2>
-    <%= image_tag ("Ilmiobirrificio.png") %>
-  </div>
-
-</div>
+<% if @user == current_user%>
+    <div>
+        <h2> - Il mio Birrificio - </h2>
+        <%= image_tag ("Ilmiobirrificio.png") %>
+    </div>
+<% else %>
+    <div class="row">
+        <aside class="span4">
+            <section>
+                <%= render 'shared/barra_amico' %>
+            </section>
+        </aside>
+        <div class="span8">
+            <h2> - Il mio Birrificio - </h2>
+            <%= image_tag ("Ilmiobirrificio.png") %>
+        </div>
+    </div>
+<% end %>
