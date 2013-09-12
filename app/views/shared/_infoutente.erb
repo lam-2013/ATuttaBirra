@@ -6,21 +6,22 @@
   <h3 id="infoutente"> - <%= @user.chisei %> -  </h3>
 </div>
 
-<div id="tagutente">
+  <nav id="tagutente">
   <ul>
    <li>
      <% if !@user.tag1.blank? %>
-        <h3 id="tagutente"> <%= link_to @user.tag1 %> </h3>
+        <%= link_to @user.tag1 %>
     <% end %>
      </li>
     <li><% if !@user.tag2.blank? %>
-        <h3 id="tagutente"><%= link_to @user.tag2, 'search_tag' %> </h3>
+        <%= link_to @user.tag2, 'search_form_tag' %>    <%# non funziona se sei in altre pagine  %>
     <% end %></li>
     <li><% if !@user.tag3.blank? %>
-        <h3 id="tagutente"><%= link_to @user.tag3, 'search_tag' %> </h3>
+        <%= link_to @user.tag3, 'search_tag' %>
     <% end %></li>
   </ul>
-</div>
+  </nav>
+
 
 <div id="punteggioutente">
   <h2 id="punteggioutente"> <%= @user.punteggio.to_i %> Punti  </h2>

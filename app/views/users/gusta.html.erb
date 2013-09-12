@@ -1,8 +1,8 @@
 <% provide :title, 'Gusta' %>
 
 <% if @user1 == current_user%>
-<div id="pic_gusta">
-  <%= image_tag ("Gusta/Gusta.png") %>
+<div id="pic_gusta_mio">
+  <%= image_tag ("Gusta/Gusta.png")%>
   <ul>
     <li id="1Gusta">
       <%= link_to image_tag("Gusta/1Gusta.png", :size => "285x166"), { :action => "dettaglio_gusta", :controller => "users" }%>
@@ -24,22 +24,22 @@
     </div>
 
     <div class="row">
-      <aside class="span4">
+      <aside class="span3">
         <section>
           <%= render 'shared/barra_amico' %>
         </section>
       </aside>
 
-      <div class="span8">
+      <div class="span9">
         <div id="pic_gusta">
           <%= image_tag ("Gusta/Gusta.png") %>
           <ul>
             <li id="1Gusta">
-              <%= link_to image_tag("Gusta/1Gusta.png", :size => "285x166"), { :action => "dettaglio_gusta", :controller => "users" }%>
+              <%= link_to image_tag("Gusta/1Gusta.png", :size => "210x122"), { :action => "dettaglio_gusta", :controller => "users" }%>
 
             </li>
             <li id="2Gusta">
-              <%= link_to image_tag("Gusta/2Gusta.png", :size => "285x166"), { :action => "dettaglio_gusta2", :controller => "users" }%>
+              <%= link_to image_tag("Gusta/2Gusta.png", :size => "210x122"), { :action => "dettaglio_gusta2", :controller => "users" }%>
             </li>
           </ul>
         </div>
