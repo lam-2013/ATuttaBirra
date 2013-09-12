@@ -87,6 +87,16 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.search_tag(tag_name)
+    if tag_name
+      where('tag1 LIKE ?', "%#{tag_name}%")
+    else
+      scoped # return an empty result set
+    end
+  end
+
+
+
   def vote!(other_user)
     voto.create!(votato: other_user.id)
 

@@ -1,18 +1,26 @@
 <div id="nomeutente">
   <h3> <%= @user.name %> </h3>
 </div>
+
 <div id="infoutente">
   <h3 id="infoutente"> - <%= @user.chisei %> -  </h3>
 </div>
+
+<div id="tagutente">
+  <ul>
+   <li> <% if !@user.tag1.blank? %>
+        <h3 id="tagutente"> <%= link_to @user.tag1, 'search_tag' %> </h3>
+    <% end %></li>
+    <li><% if !@user.tag2.blank? %>
+        <h3 id="tagutente"><%= link_to @user.tag2, 'search_tag' %> </h3>
+    <% end %></li>
+    <li><% if !@user.tag3.blank? %>
+        <h3 id="tagutente"><%= link_to @user.tag3, 'search_tag' %> </h3>
+    <% end %></li>
+  </ul>
+</div>
+
 <div id="punteggioutente">
   <h2 id="punteggioutente"> <%= @user.punteggio.to_i %> Punti  </h2>
-  <% if !@user.tag1.blank? %>
-  <h3 id="tagutente"> <%= @user.tag1 %></h3>
-      <% end %>
-  <% if !@user.tag2.blank? %>
-      <h3 id="tagutente"> <%= @user.tag2 %></h3>
-  <% end %>
-  <% if !@user.tag3.blank? %>
-      <h3 id="tagutente"> <%= @user.tag3 %></h3>
-  <% end %>
-</div>
+   </div>
+

@@ -92,7 +92,14 @@ class UsersController < ApplicationController
   # Paginated search for users
   def search
     @users = User.search(params[:search]).paginate(page: params[:page])
+    render 'search'
   end
+
+  def search_tag
+    @users = User.search_tag(params[:search_tag]).paginate(page: params[:page])
+    render 'search_tag'
+  end
+
 
   def amici
     @title = 'Amici'

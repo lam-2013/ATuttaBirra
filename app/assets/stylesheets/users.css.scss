@@ -39,6 +39,23 @@ div#punteggioutente{
   text-align: center;
 }
 
+div#tagutente{
+  position: relative;
+  left: 400px;
+  top: 120px;
+
+}
+
+div#tagutente ul{
+  list-style: none;
+  float: left;
+}
+
+div#tagutente li{
+  list-style: none;
+  float: left;
+  padding: 1em;
+}
 
 // barra personale
  div#barramenu{

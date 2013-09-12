@@ -29,7 +29,7 @@ SWorD::Application.routes.draw do
     end
     # collection: apply the reported action to the entire collection (to /users/, in this case)
     collection do
-      get :search
+      get :search, :search_tag
     end
   end
 
