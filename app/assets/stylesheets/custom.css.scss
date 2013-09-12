@@ -28,9 +28,6 @@ body {
 }
 
 
-
-
-
 // header
 nav#navheader ul a:hover, nav#navheader ul a:focus  {
   background: #c00a00;
@@ -48,8 +45,6 @@ nav#navheader ul a:hover, nav#navheader ul a:focus  {
 nav#navheader ul a:visited {
   background: none;
 }
-
-
 
 section {
   overflow: auto;
@@ -83,7 +78,6 @@ h1#arancione{
 }
 
 
-
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -105,18 +99,11 @@ p {
   line-height: 1.7em;
 }
 
-/* header */
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  padding-top: 9px;
-}
 
 /* footer */
-
 footer {
-  margin-top: 200px;
+  margin-top: 130px;
 
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
@@ -152,7 +139,7 @@ aside {
       padding-top: 0;
     }
     span {
-      display: block;
+   //   display: block;
       margin-bottom: 3px;
       line-height: 1;
     }

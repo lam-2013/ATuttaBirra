@@ -3,7 +3,7 @@
 
 
 <% if @user1 == current_user%>
-    <div id="pic_incantina">
+    <div id="pic_incantina_mio">
       <%= image_tag("InCantina/InCantina.png") %>
       <ul>
         <li id="1Incantina">
@@ -26,22 +26,22 @@
     </div>
 
 <div class="row">
-<aside class="span4">
+<aside class="span3">
   <section>
     <%= render 'shared/barra_amico' %>
   </section>
 </aside>
 
-  <div class="span8">
+  <div class="span9">
 <div id="pic_incantina">
   <%= image_tag("InCantina/InCantina.png") %>
  <ul>
    <li id="1Incantina">
-   <%= link_to image_tag("InCantina/1Incantina.png", :size => "285x166"), { :action => "dettaglio_incantina", :controller => "users" }%>
+   <%= link_to image_tag("InCantina/1Incantina.png", :size => "210x122"), { :action => "dettaglio_incantina", :controller => "users" }%>
 
    </li>
    <li id="2Incantina">
-     <%= link_to image_tag("InCantina/2Incantina.png", :size => "285x166"), { :action => "dettaglio_incantina2", :controller => "users" }%>
+     <%= link_to image_tag("InCantina/2Incantina.png", :size => "210x122"), { :action => "dettaglio_incantina2", :controller => "users" }%>
    </li>
  </ul>
 </div>

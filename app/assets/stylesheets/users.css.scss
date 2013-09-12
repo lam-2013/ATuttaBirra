@@ -12,6 +12,7 @@ div#banner{
   background-repeat: no-repeat;
   background-size: 950px, 230px;
   position: relative;
+  z-index: 1;
 }
 
 div#nomeutente{
@@ -40,23 +41,88 @@ div#punteggioutente{
   text-align: center;
 }
 
-div#tagutente{
+
+
+nav#tagutente{
+  position: absolute;
+  width: 960px;
+  margin: 80px auto;
+  text-align: center;
+  left: 140px;
+  top: 100px;
+
+}
+
+nav#tagutente ul{
+  margin: 0;
+  padding: 0;
+}
+
+nav#tagutente li{
+  margin: 0 10px; /* Add some horizontal spacing */
+  display: inline-block;
+  *display: inline;  /* IE7 and below */
+  zoom: 1;
+}
+
+nav#tagutente a{
+  display: inline-block;
   position: relative;
-  left: 400px;
-  top: 120px;
-
+  padding: 8px 15px;
+  border: 2px solid #fff;
+  text-decoration: none;
+  color: #7f7f7f;
+  font: bold 14px 'Josschrift Serif';
+  background-color: #eaeaea;
+  background-image: linear-gradient(top, #eaeaea, #fff);
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05) inset,
+  0 0 1px 0 rgba(0, 0, 0, .2),
+  0 2px 2px rgba(0, 0, 0, .3),
+  0 10px 10px -5px rgba(0, 0, 0, .2);
 }
 
-div#tagutente ul{
-  list-style: none;
-  float: left;
+nav#tagutentea:hover{
+  background-color: #eee;
+  background-image: linear-gradient(top, #eee, #fff);
 }
 
-div#tagutente li{
-  list-style: none;
-  float: left;
-  padding: 1em;
+nav#tagutente a:active{
+  top: 1px; /* Simulate the push button effect */
+  background: #f5f5f5;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05) inset,
+  0 0 1px 0px rgba(0, 0, 0, .2),
+  0 1px 2px rgba(0, 0, 0, .3);
 }
+
+
+
+div#bottone_modifica{
+  position: absolute;
+  width: 10;
+  padding-left: 810px;
+  top: 415px;
+}
+
+.button{
+  display: inline-block;
+  padding: 12px 30px;
+  margin: 0;
+  border: 1px solid #000000;
+  overflow: visible;
+  font: bold 13px 'Aharoni';
+  text-decoration: none;
+  color: #fefff9;
+  background-color: #ffa10e;
+  border-radius: 3px;
+  background: -moz-linear-gradient(#fac754, #f8ac00);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fac754), to(#f8ac00));
+  background: -webkit-linear-gradient(#fac754, #f8ac00);
+  background: -o-linear-gradient(#fac754, #f8ac00);
+  background: -ms-linear-gradient(#fac754, #f8ac00);
+  background: linear-gradient(#fac754, #f8ac00);
+}
+
 
 // barra personale
  div#barramenu{
@@ -92,15 +158,19 @@ nav#icone ul {
 }
 nav#icone li {
   float:left;
+  color: #ffffff;
 }
 
 nav#icone a {
+  font-weight: bold;
+  font-family: Arial;
+  color: #ffffff;
   float:left;
   padding: .2em .8em;   //distanza tra le icone
 }
 
 nav#icone a:hover, nav#icone a:focus {
-  outline: 0;
+  text-decoration: none;
   background: #fac754;
   background: -moz-linear-gradient(#fac754, #f8ac00);
   background: -webkit-gradient(linear, left top, left bottom, from(#fac754), to(#f8ac00));
@@ -124,8 +194,8 @@ nav#icone a:active {
 // barra amico
 
 div#barramenu_amico{
-  width: 220px;
-  height: 850px;
+  width: 160px;
+  height: 800px;
   padding-left: 20px;
 }
 
@@ -133,8 +203,8 @@ nav#iconeamico  {
   padding-left: 40px;
   padding-top: 20px;
   // position: relative;
-  display: block;
-  width: 50%;
+ // display: block;
+//  width: 90%;
   overflow: hidden;
 }
 
@@ -155,7 +225,6 @@ nav#iconeamico ul {
 nav#iconeamico li {
   padding: .3em .3em;
   text-align: center;
-  // float:left;
 }
 
 nav#iconeamico a {
@@ -193,8 +262,6 @@ div#votazione{
   height: 400px;
   padding-left: 40px;
   padding-top: 70px;
-  // padding-top: 20px;
-  // position: relative;
   display: block;
   width: 60%;
   height: 50%;
@@ -254,10 +321,22 @@ div#votazione a:hover, div#votazione a:focus {
 #pic_incantina ul{
   position: absolute;
   float: left;
-  top: 253px;
+  top: 200px;
 }
 
 #pic_incantina li{
+  position: relative;
+  list-style: none;
+  float: left;
+}
+
+#pic_incantina_mio ul{
+  position: absolute;
+  float: left;
+  top: 320px;
+}
+
+#pic_incantina_mio li{
   position: relative;
   list-style: none;
   float: left;
@@ -272,8 +351,7 @@ div#votazione a:hover, div#votazione a:focus {
 #pic_gusta ul{
   position: absolute;
   float: left;
-  top: 214px;
-  left: 8px;
+  top: 160px;
 }
 
 #pic_gusta li{
@@ -283,6 +361,20 @@ div#votazione a:hover, div#votazione a:focus {
   padding: .1em;
 }
 
+
+#pic_gusta_mio ul{
+  position: absolute;
+  float: left;
+  top: 274px;
+  left: 212px;
+}
+
+#pic_gusta_mio li{
+  position: relative;
+  list-style: none;
+  float: left;
+  padding: .1em;
+}
 
 
 // indietro
