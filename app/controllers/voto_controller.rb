@@ -7,7 +7,6 @@ class VotoController  < ApplicationController
 
   def show_voto
     @voto = Votazione.find(params[:id])
-  #  @voto = Votazione.find(params[:id])
 
   end
 

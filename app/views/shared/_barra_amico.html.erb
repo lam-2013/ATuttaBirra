@@ -4,7 +4,7 @@
       <nav id="iconeamico">
         <ul>
 
-          <li><%= link_to image_tag("Icon/ProfiloIcon.png", :size => "50x50"), @users %>   </li>
+          <li><%= link_to image_tag("Icon/ProfiloIcon.png", :size => "50x50"),  { :action => "show", :controller => "users" } %>   </li>
           <li><%= link_to image_tag("Icon/AmiciIcon.png", :size => "60x60"), { :action => "amici", :controller => "users" }%> </li>
           <li><%= link_to image_tag("Icon/GalleryIcon.png", :size => "50x50"),{ :action => "gallery", :controller => "users" }%> </li>
           <li><%= link_to image_tag("Icon/MessaggiIcon.png", :size => "60x60"), { :action => "messaggi", :controller => "users" }%> </li>

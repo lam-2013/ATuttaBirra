@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     # get and paginate the posts associated to the specified user
     @posts = @user.posts.paginate(page: params[:page])
-
+    render 'show'
   end
 
 
@@ -97,7 +97,7 @@ class UsersController < ApplicationController
   end
 
   def search_tag
-    @users = User.search_tag(params[:search_tag]).order('punteggio DESC').paginate(page: params[:page])
+    @users = User.search_tag(params[:search_tag]).order('chisei DESC, punteggio DESC').paginate(page: params[:page])
     render 'search_tag'
   end
 
@@ -197,8 +197,5 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to root_path unless current_user.admin?
     end
-
-
-
 
 end

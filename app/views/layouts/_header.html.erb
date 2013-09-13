@@ -1,65 +1,64 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
+<div class="navbar-inner">
+<div class="container">
 
 
-      <nav id="navheader">
-        <%=link_to image_tag("logo.png", :size => "100x100"), root_path %>
-        <ul class="nav pull-right">
-          <% #link_to is the Rails helper to create links (it generates <a...> tags) %>
+  <nav id="navheader">
+    <%=link_to image_tag("logo.png", :size => "100x100"), root_path %>
+    <ul class="nav pull-right">
+      <% #link_to is the Rails helper to create links (it generates <a...> tags) %>
 
 
-          <% if signed_in? %>
-              <%#   <li id="account"><%= link_to "Account", account_menu_path  </li>   %>
-                <li id="account"><a href="#" onClick="mostraAccount_menu();" > Account </a>
+      <% if signed_in? %>
+            <li id="account"><a href="#" onClick="mostraAccount_menu();" > Account </a>
 
-              </li>
-          <% end %>
+          </li>
+      <% end %>
 
-          <li><%=link_to "Home",    root_path %></li>
+      <li><%=link_to "Home",    root_path %></li>
 
-          <% if signed_in? %>
+      <% if signed_in? %>
 
-              <li><%= link_to "Cerca", cerca_path %></li>
-              </li>
+          <li><%= link_to "Cerca", cerca_path %></li>
+          </li>
 
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Impostazioni <b class="caret"></b></a>
-              <ul class="dropdown-menu">
+        <li id="fat-menu" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Impostazioni <b class="caret"></b></a>
+          <ul class="dropdown-menu">
 
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
-              </ul>
-          <% else %>
-            <li><%=link_to "Sign in", signin_path %></li>
-          <% end %>
-        </ul>
-      </nav>
-    </div>
-  </div>
+            <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+          </ul>
+      <% else %>
+        <li><%=link_to "Sign in", signin_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
+</div>
 </header>
 <% if signed_in? %>
 <div id="barramenu"style="display: none">
 
-  <nav id="icone">
-    <ul>
+<nav id="icone">
+<ul>
 
-      <li><%= link_to image_tag("Icon/ProfiloIcon.png", :size => "70x70"), current_user %>   </li>
-       <li><%= link_to image_tag("Icon/AmiciIcon.png", :size => "70x70"), { :action => "amici", :controller => "users", :id => current_user }%> </li>
-      <li><%= link_to image_tag("Icon/GalleryIcon.png", :size => "70x70"),{ :action => "gallery", :controller => "users", :id => current_user }%> </li>
-      <li><%= link_to image_tag("Icon/MessaggiIcon.png", :size => "80x80"), { :action => "messaggi", :controller => "users", :id => current_user }%> </li>
-      <% if current_user.chisei == 'Mastro Birraio' %>
-      <li><%= link_to image_tag("Icon/BirrificioIcon.png", :size => "70x70"), { :action => "il_mio_birrificio", :controller => "users", :id => current_user }%> </li>
-      <% end %>
-      <% if current_user.chisei != 'Appassionato di birra' %>
-          <li><%= link_to image_tag("Icon/InCantinaIcon.png", :size => "90x90"), { :action => "in_cantina", :controller => "users", :id => current_user }%> </li>
-      <% end %>
-      <li><%= link_to image_tag("Icon/GustaIcon.png", :size =>"60x60"), { :action => "gusta", :controller => "users", :id => current_user } %> </li>
-      <li><%= link_to image_tag("Icon/MercatinoIcon.png", :size => "80x80"), { :action => "mercatino", :controller => "users", :id => current_user }%> </li>
-      <li><%= link_to image_tag("Icon/GruppiIcon.png", :size => "60x60"), { :action => "gruppi", :controller => "users", :id => current_user }%> </li>
-      <li><a href="#" onClick="mostraAccount_menu();" > X </a></li>
-    </ul>
-  </nav>
+  <li><%= link_to image_tag("Icon/ProfiloIcon.png", :size => "70x70"), current_user %>   </li>
+   <li><%= link_to image_tag("Icon/AmiciIcon.png", :size => "70x70"), { :action => "amici", :controller => "users", :id => current_user }%> </li>
+  <li><%= link_to image_tag("Icon/GalleryIcon.png", :size => "70x70"),{ :action => "gallery", :controller => "users", :id => current_user }%> </li>
+  <li><%= link_to image_tag("Icon/MessaggiIcon.png", :size => "80x80"), { :action => "messaggi", :controller => "users", :id => current_user }%> </li>
+  <% if current_user.chisei == 'Mastro Birraio' %>
+  <li><%= link_to image_tag("Icon/BirrificioIcon.png", :size => "70x70"), { :action => "il_mio_birrificio", :controller => "users", :id => current_user }%> </li>
+  <% end %>
+  <% if current_user.chisei != 'Appassionato di birra' %>
+      <li><%= link_to image_tag("Icon/InCantinaIcon.png", :size => "90x90"), { :action => "in_cantina", :controller => "users", :id => current_user }%> </li>
+  <% end %>
+  <li><%= link_to image_tag("Icon/GustaIcon.png", :size =>"60x60"), { :action => "gusta", :controller => "users", :id => current_user } %> </li>
+  <li><%= link_to image_tag("Icon/MercatinoIcon.png", :size => "80x80"), { :action => "mercatino", :controller => "users", :id => current_user }%> </li>
+  <li><%= link_to image_tag("Icon/GruppiIcon.png", :size => "60x60"), { :action => "gruppi", :controller => "users", :id => current_user }%> </li>
+  <li><a href="#" onClick="mostraAccount_menu();" > X </a></li>
+</ul>
+</nav>
 
 </div><% end %>

@@ -1,51 +1,51 @@
-<% #Provide the page title in a symbol to application.html.erb to avoid duplication %>
 <% provide :title, 'In Cantina' %>
 
 
 <% if @user1 == current_user%>
-    <div id="pic_incantina_mio">
-      <%= image_tag("InCantina/InCantina.png") %>
-      <ul>
-        <li id="1Incantina">
-          <%= link_to image_tag("InCantina/1Incantina.png", :size => "285x166"), { :action => "dettaglio_incantina", :controller => "users" }%>
+<div id="pic_incantina_mio">
+  <%= image_tag("InCantina/InCantina.png") %>
+  <ul>
+    <li id="1Incantina">
+      <%= link_to image_tag("InCantina/1Incantina.png", :size => "285x166"), { :action => "dettaglio_incantina", :controller => "users" }%>
 
-        </li>
-        <li id="2Incantina">
-          <%= link_to image_tag("InCantina/2Incantina.png", :size => "285x166"), { :action => "dettaglio_incantina2", :controller => "users" }%>
-        </li>
-      </ul>
-    </div>
+    </li>
+    <li id="2Incantina">
+      <%= link_to image_tag("InCantina/2Incantina.png", :size => "285x166"), { :action => "dettaglio_incantina2", :controller => "users" }%>
+    </li>
+  </ul>
+</div>
 
-    <% else %>
+<% else %>
 
-    <div id="banner">
-      <% if current_user || (@user) %>
-          <%  @user = User.find(params[:id])  %>
-      <% end %>
-      <%= render 'shared/infoutente' %>
-    </div>
+<div id="banner">
+  <% if current_user || (@user) %>
+      <%  @user = User.find(params[:id])  %>
+  <% end %>
+  <%= render 'shared/infoutente' %>
+</div>
 
 <div class="row">
 <aside class="span3">
-  <section>
-    <%= render 'shared/barra_amico' %>
-  </section>
+<section>
+<%= render 'shared/barra_amico' %>
+</section>
 </aside>
 
-  <div class="span9">
+<div class="span9">
 <div id="pic_incantina">
-  <%= image_tag("InCantina/InCantina.png") %>
- <ul>
-   <li id="1Incantina">
-   <%= link_to image_tag("InCantina/1Incantina.png", :size => "210x122"), { :action => "dettaglio_incantina", :controller => "users" }%>
+<%= image_tag("InCantina/InCantina.png") %>
+<ul>
+<li id="1Incantina">
+<%= link_to image_tag("InCantina/1Incantina.png", :size => "210x122"), { :action => "dettaglio_incantina", :controller => "users" }%>
 
-   </li>
-   <li id="2Incantina">
-     <%= link_to image_tag("InCantina/2Incantina.png", :size => "210x122"), { :action => "dettaglio_incantina2", :controller => "users" }%>
-   </li>
- </ul>
+</li>
+<li id="2Incantina">
+ <%= link_to image_tag("InCantina/2Incantina.png", :size => "210x122"), { :action => "dettaglio_incantina2", :controller => "users" }%>
+</li>
+</ul>
 </div>
-  </div>
-  <% end %>
+</div>
+</div>
+<% end %>
 
-    </div>
+

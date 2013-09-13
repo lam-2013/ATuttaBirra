@@ -1,34 +1,32 @@
-<% #Provide the page title in a symbol to application.html.erb to avoid duplication %>
 <% provide :title, 'Cerca' %>
 
 <h1 id="arancione">Cerca</h1>
 
- <fieldset>
-    <div id="ricerca">
-        <p id="ricerca">Ricerca tramite:</p>
+<fieldset>
+<div id="ricerca">
+    <p id="ricerca">Ricerca tramite:</p>
 
-        <%= form_tag search_users_path, method: 'get' do %>
-        <%# form_for @search do |f| %>
-            <%= render 'users/search_form' %>
-        <% end %>
+    <%= form_tag search_users_path, method: 'get' do %>
+        <%= render 'users/search_form' %>
+    <% end %>
 
 
 <div id="ricercagruppi">
-    <p id="ricercagruppi">
-        <%= label_tag :gruppi %>
-    </p>
-    <p id="ricercagruppi">
-        <%= text_field_tag :search, params[:search], class: 'search-query', placeholder: 'Search'  %>
-    </p>
-    <p id="ricercagruppi">
-        <%= submit_tag "Search", disabled: true, class: 'btn btn-large btn-primary' %>
-    </p>
+<p id="ricercagruppi">
+    <%= label_tag :gruppi %>
+</p>
+<p id="ricercagruppi">
+    <%= text_field_tag :search, params[:search], class: 'search-query', placeholder: 'Search'  %>
+</p>
+<p id="ricercagruppi">
+    <%= submit_tag "Search", disabled: true, class: 'btn btn-large btn-primary' %>
+</p>
 </div>
 
 
-    <%= form_tag search_tag_users_path, method: 'get' do %>
-        <%= render 'users/search_form_tag' %>
-    <% end %>
+<%= form_tag search_tag_users_path, method: 'get' do %>
+    <%= render 'users/search_form_tag' %>
+<% end %>
 </div>
 
- </fieldset>
+</fieldset>

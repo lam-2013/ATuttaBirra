@@ -3,33 +3,33 @@
 
 <% if signed_in? %>
 
-  <div class="row">
-    <aside class="span3">
-      <section>
-        <%= render 'shared/user_info' %>
-      </section>
-      <section>
-        <%= render 'shared/stats' %>
-      </section>
-    </aside>
-    <div class="span9">
-      <%= render 'shared/post_form' %>
-      <h3>Diario Utente</h3>
-      <%= render 'shared/feed' %>
-    </div>
-  </div>
+<div class="row">
+<aside class="span3">
+  <section>
+    <%= render 'shared/user_info' %>
+  </section>
+  <section>
+    <%= render 'shared/stats' %>
+  </section>
+</aside>
+<div class="span9">
+  <%= render 'shared/post_form' %>
+  <h3>Diario Utente</h3>
+  <%= render 'shared/feed' %>
+</div>
+</div>
 
 <% else %>
-  <body id="home">
-  <div class="center hero-unit" id="classhome" >
+<body id="home">
+<div class="center hero-unit" id="classhome" >
 
-    <h1>Benvenuti su <br> A TuttaBirra!</h1>
-    <br>
-    <h2>
-      Registrati o fai il LogIn  <br> per accedere ad A TuttaBirra
-    </h2>
+<h1>Benvenuti su <br> A TuttaBirra!</h1>
+<br>
+<h2>
+  Registrati o fai il LogIn  <br> per accedere ad A TuttaBirra
+</h2>
 
-    <%= link_to 'Registrati!', signup_path, class: 'btn btn-large btn-primary' %>
+<%= link_to 'Registrati!', signup_path, class: 'btn btn-large btn-primary' %>
 </div>
-  </body>
+</body>
 <% end %>

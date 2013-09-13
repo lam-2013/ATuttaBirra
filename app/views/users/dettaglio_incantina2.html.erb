@@ -5,18 +5,7 @@
   <a id="img_dettaglio" href="" onclick="history.back()"> </a>
 </div>
 
-<% if current_user.id != @user1.id %>
-    <div id="votazione">
+<div>
+  <%= render 'voto_form' if current_user.id != @user1.id %>
 
-      <ul>
-        <li><h4>VOTA</h4></li>
-        <li><%= link_to 'Hate it!', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
-        <li><%= link_to 'Don\'t like it!', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
-        <li><%= link_to 'Like it!', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
-        <li><%= link_to 'Love it!', { :action => "dettaglio_incantina", :controller => "users" }%> </li>
-      </ul>
-
-    </div>
-<% else %>
-
-<% end %>
+</div>
