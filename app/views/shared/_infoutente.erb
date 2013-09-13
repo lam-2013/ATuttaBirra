@@ -10,14 +10,14 @@
   <ul>
    <li>
      <% if !@user.tag1.blank? %>
-        <%= link_to @user.tag1 %>
+        <%= link_to @user.tag1, { :controller => "users", :action => "search_tag", :search_tag => @user.tag1}  %>
     <% end %>
      </li>
     <li><% if !@user.tag2.blank? %>
-        <%= link_to @user.tag2, users_path(user, :method => "get", :class => "users")%>
+        <%= link_to @user.tag2, { :controller => "users", :action => "search_tag", :search_tag => @user.tag2} %>
     <% end %></li>
     <li><% if !@user.tag3.blank? %>
-        <%= link_to @user.tag3, 'search_tag' %>
+        <%= link_to @user.tag3, { :controller => "users", :action => "search_tag", :search_tag => @user.tag3} %>
     <% end %></li>
   </ul>
   </nav>
