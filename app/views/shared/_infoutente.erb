@@ -14,7 +14,7 @@
     <% end %>
      </li>
     <li><% if !@user.tag2.blank? %>
-        <%= link_to @user.tag2, 'search_form_tag' %>
+        <%= link_to @user.tag2, users_path(user, :method => "get", :class => "users")%>
     <% end %></li>
     <li><% if !@user.tag3.blank? %>
         <%= link_to @user.tag3, 'search_tag' %>
